@@ -1,0 +1,46 @@
+<!-- Navbar Start -->
+<nav class="navbar navbar-inverse" role="banner" style="width:%100">
+    <div class="container">
+
+        <div class="navbar-header">
+
+            <!-- Telefon ekranları için menü butonu -->
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar" style="background-color:#99ccff;"></span>
+                <span class="icon-bar" style="background-color:#99ccff;"></span>
+                <span class="icon-bar" style="background-color:#99ccff;"></span>
+            </button>
+            <!-- İsim Soyisim veya Marka İsmi -->
+            <a href="{% url 'home' %}" class="navbar-brand" style="text-shadow: 2px 0 4px lightgreen; font-size:25px; color:#99ccff;">| deXmon</a>
+
+        </div>
+
+        <nav class="collapse navbar-collapse" role="navigation">
+
+            <!-- Arama Çubuğu -->
+            <form class="navbar-form navbar-left" role="search" method="GET" action="">
+                <div class="input-group">
+                    <input class="form-control" type="text" name="q" placeholder="tag,baslik,kelime..." value="{{ request.GET.q }}" style="border:1.5px solid #99ccff;" >
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" style="border:1.2px solid #99ccff;">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+                </div>
+            </form>
+
+            <!-- Temel Sayfalar -->
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="{% url 'post:index'%}" style="text-shadow:2px 0 4px lightgreen; font-size:17px; color:#99ccff;">Blog</a></li>
+                <li><a href="{% url 'about' %}" style="text-shadow:2px 0 4px lightgreen; font-size:17px; color:#99ccff;">Hakkımızda</a></li>
+                <li><a href="/iletisim" style="text-shadow:2px 0 4px lightgreen; font-size:17px; color:#99ccff;">İletişim</a></li>
+            </ul>
+
+        </nav>
+
+
+    </div>
+</nav>
+
+
